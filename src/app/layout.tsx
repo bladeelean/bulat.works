@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import { Providers, TanstackProvider } from "@/common/providers";
 import { Footer, Header } from "@/components";
-import { inter } from "@/styles/fonts";
+import { inter, sf_pro } from "@/styles/fonts";
 
-const titleSite = "DCiel Template";
-const descriptionSite = "Default template studio";
+const titleSite = "Ruslan ✦ Creative product designer";
+const descriptionSite = "Based in Kazan, hands-on by nature, with a systems mindset, strong product vision, and empathy as a core strength";
 
 export const metadata: Metadata = {
 	title: titleSite,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 		type: "website",
 		images: [
 			{
-				url: "/other/graph.png",
+				url: "/other/preview.png",
 				width: 800,
 				height: 600,
 			},
@@ -37,12 +37,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html className="dark" lang="en">
-			<body className={`${inter.className} antialiased`}>
+		<html className="" lang="en">
+			<body className={`${sf_pro.className} ${sf_pro.variable} antialiased`}>
 				<TanstackProvider>
-					<Header />
+					{/* <Header /> */}
 					{children}
-					<Footer />
+					{/* <Footer /> */}
 					<Providers />
 				</TanstackProvider>
 			</body>

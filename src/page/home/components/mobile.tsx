@@ -13,13 +13,15 @@ export const Mobile = () => {
     if(!isMobile || !isOpen) return null;
 
     return (
-        <div className=" fixed inset-0 center text-center bg-black z-50">
-            <div className=" center bg-white p-[26px] rounded-[24px] max-w-[280px] flex-col">  
-                <p className=" text-[24px] leading-[28px] font-bold">Сейчас удобнее открыть с ПК</p>
-                <p className=" text-[16px] mt-[4px] font-medium">Мобильная версия скоро будет доступна</p>
-                <Button onClick={() => setIsOpen(false)} className=" text-[16px] mt-[16px] rounded-[16px] py-[12px] w-full bg-[#E1E4E8] text-black">
-                    Открыть веб-версию
-                </Button>
+        <div className=" fixed inset-0  text-center min-h-[150%] bg-black z-50">
+            <div className=" h-screen center"> 
+                <div className=" center bg-[#FFFFFF14] text-white p-[20px] rounded-[40px] max-w-[280px] flex-col">  
+                    <p className=" text-[24px] leading-[28px] font-bold">Сейчас удобнее открыть с ПК</p>
+                    <p className=" text-[16px] text-[#FFFFFF66] mt-[4px] font-medium">Мобильная версия скоро будет доступна</p>
+                    <Button onClick={() => setIsOpen(false)} className=" text-[16px] mt-[16px] rounded-[16px] py-[12px] w-full bg-[#FFFFFF14] text-white">
+                        Открыть веб-версию
+                    </Button>
+                </div>
             </div>
         </div>
     );

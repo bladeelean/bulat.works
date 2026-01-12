@@ -129,7 +129,7 @@ html body[data-scroll-locked] {
 }
 
 html {
-	font-size: 1vw;
+	font-size: 1.13vw;
 	scroll-behavior: smooth;
 }
 
@@ -153,4 +153,12 @@ body::-webkit-scrollbar {
 
 @utility container {
 	@apply max-w-[100%] px-32;
+}
+
+
+.text-gradient-welcome {
+	background: linear-gradient(90deg, #0095FF 0%, #ADD2FF 50%, #ADFF2A 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

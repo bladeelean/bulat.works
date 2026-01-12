@@ -37,7 +37,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html className="" lang="en">
+		<html className="dark" lang="en">
 			<body className={`${sf_pro.className} ${sf_pro.variable} antialiased`}>
 				<TanstackProvider>
 					{/* <Header /> */}

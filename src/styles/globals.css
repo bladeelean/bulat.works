@@ -162,3 +162,10 @@ body::-webkit-scrollbar {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+.text-gradient-dialog-title {
+	background: linear-gradient(90deg, #4E9BF8 0%, #ADD2FF 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

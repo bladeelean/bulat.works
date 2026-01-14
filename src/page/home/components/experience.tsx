@@ -21,17 +21,7 @@ const experienceData = [
         years: "2019 – 2021",
     },
 ]
-import StarDustCanvas from "@/components/StarDustCanvas";
-
-export default function Page() {
-  return (
-    <div className="relative w-full h-[400px] bg-black overflow-hidden">
-      <StarDustCanvas />
-      {/* твой контент сверху */}
-      <div className="relative z-10 text-white p-6">Hello</div>
-    </div>
-  );
-}
+return <canvas ref={ref} style={{ width: 800, height: 400 }} />;
 
 export const Experience = () => {
     return (

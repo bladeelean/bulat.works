@@ -45,11 +45,11 @@ export const PortfolioMobile = () => {
                     key={idx+ "mobile"}
                 >
                     {typeof item.image === "string" ? (
-                        <Image className=" mx-auto w-96 h-[52rem]" src={item.image} alt={idx + "mobile"} width={600} height={1000} />
+                        <Image className=" mx-auto w-[25rem] h-[52rem] object-cover" src={item.image} alt={idx + "mobile"} width={600} height={1000} />
                     ) : (
                         <div className=" center gap-16 flex-col">
                             {item.image.map((image, idx) => (
-                                <Image key={idx + "mobile"} className="  w-96 h-[52rem]" src={image} alt={idx + "mobile"} width={600} height={1000} />
+                                <Image key={idx + "mobile"} className="  w-[25rem] h-[52rem]" src={image} alt={idx + "mobile"} width={600} height={1000} />
                             ))}
                         </div>
                     )}
@@ -339,7 +339,7 @@ const DataThree = () => {
                         <p className=" font-bold w-fit text-5xl">Попытка 2</p>
                         <p className=" text-2xl text-[#FFFFFF66] mt-3 font-medium">Сразу после первой итерации я начал думать о следующем шаге. В этот момент у меня как раз пропал интернет в Chrome, и на экране появился тот самый офлайн-динозаврик. Тогда и возникла мысль: а почему бы не превратить ожидание оператора в похожий игровой сценарий. Параллельно я вспомнил про аналогичную фичу в Лавке. Пошел процесс...</p>
                         <Image
-                            className=" mt-11 mx-auto w-96 h-[52rem]"
+                            className=" mt-11 mx-auto w-[25rem] h-[52rem]"
                             src={"/images/mobile/21.png"} 
                             alt=""
                             width={600}
@@ -361,21 +361,21 @@ const DataThree = () => {
                                 alt=""
                                 width={256}
                                 height={256}
-                                className=" w-16 h-16"
+                                className=" w-16 h-20"
                             />
                             <Image
                                 src={"/images/mobile/24.png"} 
                                 alt=""
                                 width={256}
                                 height={296}
-                                className=" w-16 h-24"
+                                className=" w-20 h-24"
                             />
                             <Image
                                 src={"/images/mobile/25.png"} 
                                 alt=""
                                 width={400}
                                 height={256}
-                                className=" w-32 h-12"
+                                className=" w-36 h-14"
                             />
                             <Image
                                 src={"/images/mobile/26.png"} 

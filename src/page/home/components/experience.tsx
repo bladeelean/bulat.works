@@ -21,7 +21,7 @@ const experienceData = [
         years: "2019 – 2021",
     },
 ]
-
+<canvas width="800" height="800" class="absolute inset-0 pointer-events-auto cursor-pointer w-full h-full" style="image-rendering: pixelated; mix-blend-mode: normal;"></canvas>
 
 export const Experience = () => {
     return (

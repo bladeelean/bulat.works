@@ -1,6 +1,6 @@
 const experienceData = [
     {
-        name: "Минцифры",
+        name: "Платформа САН",
         post: "Продуктовый дизайнер",
         years: "2023 – ",
         now: true,

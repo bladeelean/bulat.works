@@ -37,28 +37,26 @@ function StarDustCanvas() {
     if (!ctx) return;
 
     let raf = 0;
+    let drift = 0; // общий сдвиг “поля”
+    let dpr = 1;
 
-    // чуть больше точек для “плотности”
     const stars = Array.from({ length: 2600 }, () => ({
-      x: Math.random(),
-      y: Math.random(),
+      x: Math.random(), // 0..1
+      y: Math.random(), // 0..1
       a: 0.12 + Math.random() * 0.65,
       p: Math.random() * Math.PI * 2,
       s: 0.6 + Math.random() * 1.6,
     }));
 
     const resize = () => {
-      const dpr = Math.max(1, window.devicePixelRatio || 1);
+      dpr = Math.max(1, window.devicePixelRatio || 1);
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
-
-      // если контейнер вдруг 0px — не рендерим, чтобы не ломаться
       if (!w || !h) return;
 
       canvas.width = Math.floor(w * dpr);
       canvas.height = Math.floor(h * dpr);
 
-      // рисуем в CSS-пикселях (удобнее)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.imageSmoothingEnabled = false;
     };
@@ -68,25 +66,34 @@ function StarDustCanvas() {
       const h = canvas.clientHeight;
 
       if (w && h) {
-        ctx.clearRect(0, 0, w, h);
+        // дрейф — движение будет заметно
+        drift += 0.00035; // скорость (можно 0.0002..0.001)
+        const dx = (drift * w) % w;
+        const dy = (drift * 0.7 * h) % h;
 
-        // фон
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, w, h);
 
-        // слабая дымка (как на скрине — почти незаметно)
-        const g = ctx.createRadialGradient(w * 0.5, h * 0.4, 0, w * 0.5, h * 0.4, Math.min(w, h) * 0.7);
+        // слабая дымка
+        const g = ctx.createRadialGradient(
+          w * 0.5, h * 0.4, 0,
+          w * 0.5, h * 0.4, Math.min(w, h) * 0.7
+        );
         g.addColorStop(0, "rgba(200,210,220,0.06)");
         g.addColorStop(1, "rgba(0,0,0,0)");
         ctx.fillStyle = g;
         ctx.fillRect(0, 0, w, h);
 
-        // звёзды + мерцание
+        // звёзды: мерцание + сдвиг
         for (const s of stars) {
-          const tw = 0.6 + 0.4 * Math.sin(t * 0.003 * s.s + s.p);
+          const tw = 0.45 + 0.55 * Math.sin(t * 0.004 * s.s + s.p); // заметнее
           const a = Math.max(0, Math.min(1, s.a * tw));
+
+          const x = (((s.x * w) + dx) % w) | 0;
+          const y = (((s.y * h) + dy) % h) | 0;
+
           ctx.fillStyle = `rgba(255,255,255,${a})`;
-          ctx.fillRect((s.x * w) | 0, (s.y * h) | 0, 1, 1);
+          ctx.fillRect(x, y, 1, 1);
         }
       }
 
@@ -111,38 +118,3 @@ function StarDustCanvas() {
     />
   );
 }
-
-export const Experience = () => {
-  return (
-    <section className="relative">
-      {/* ВАЖНО: контейнер с высотой и relative */}
-      <div className="relative w-full overflow-hidden bg-black py-20">
-        {/* фон */}
-        <div className="absolute inset-0 opacity-100">
-          <StarDustCanvas />
-        </div>
-
-        {/* контент поверх */}
-        <div className="relative z-10 container">
-          <h2 className="text-[#747C87] text-2xl font-semibold">ОПЫТ</h2>
-
-          <div className="mt-8 text-2xl space-y-10">
-            {experienceData.map((item) => (
-              <div className="grid grid-cols-[12rem_1fr] gap-8" key={item.name}>
-                <h3 className="font-semibold">
-                  {item.years}
-                  {item.now && <span className="text-[#73DC36]">н.в</span>}
-                </h3>
-
-                <div>
-                  <p className="font-semibold">{item.name}</p>
-                  <p className="text-[#FFFFFF8F] mt-4 text-2xl font-medium">{item.post}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};

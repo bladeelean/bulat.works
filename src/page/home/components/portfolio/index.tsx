@@ -5,7 +5,7 @@ export const Portfolio = () => {
     <section>
       <div className="mt-24 flex justify-center">
         <a
-  href="/cv.pdf"
+  href="/other/cv.pdf"
   target="_blank"
   rel="noopener noreferrer"
  className="h-[64px] rounded-[24px]

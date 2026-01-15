@@ -10,7 +10,7 @@ export const Portfolio = () => {
           rel="noopener noreferrer"
           className="w-[249px] h-[62px] rounded-[20px] bg-[#226DFF]
            flex items-center justify-center
-           text-white text-lg font-semibold
+           text-white text-xl font-semibold
            hover:opacity-90 transition"
         >
           Посмотреть подробно в PDF

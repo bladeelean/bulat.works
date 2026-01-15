@@ -14,7 +14,7 @@ export const Welcome = () => {
                     </div>
                     <Image
                         className=" size-36"
-                        src={"/page/home/photo.png"}
+                        src={"/page/home/IMG_1676 1.png"}
                         alt=""
                         width={512}
                         height={512}

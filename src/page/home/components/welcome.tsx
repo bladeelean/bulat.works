@@ -9,8 +9,8 @@ export const Welcome = () => {
                 <p className=" w-fit text-2xl font-semibold text-gradient-welcome ">Sr. Product designer,  6+ лет опыта</p>
                 <div className=" flex gap-10">
                     <div>
-                        <p className=" text-[2.65rem] leading-14 font-semibold mt-8">Привет, я Руслан — креативный продуктовый дизайнер. Запускал и принимал участие в двух продуктах с миллионной аудиторией. Участвовал в разработке крупной дизайн-системы.</p>
-                        <p className=" text-2xl  font-medium  text-[#FFFFFF8F] mt-3">Фокусируюсь на системный дизайн и практические решения. Работаю с продуктами целиком: от пользовательских сценариев и логики до интерфейсных решений, готовых <br/>к продакшену и масштабированию.  </p>
+                        <p className=" text-[2.65rem] leading-14 font-semibold mt-8">Привет, я Булат — product manager.Запускал и принимал участие в B2B и B2C в продуктах с миллионной аудиторией.</p>
+                        <p className=" text-2xl  font-medium  text-[#FFFFFF8F] mt-3">Превращаю сложные требования в рабочий продукт, убираю хаос между бизнесом и разработкой. Совмещаю инженерное мышление и креативный подход в работе. Создаю результат, а не фичи.  </p>
                     </div>
                     <Image
                         className=" size-36"

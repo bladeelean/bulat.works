@@ -6,7 +6,7 @@ const experienceData = [
         now: true,
     },
     {
-        name: "Брио МРС»",
+        name: "Брио МРС",
         post: "Product manager",
         years: "2023 - 2024",
 ]

@@ -9,7 +9,8 @@ const experienceData = [
         name: "Брио МРС",
         post: "Product manager",
         years: "2023 - 2024",
-]
+ },
+];
 
 export const Experience = () => {
     return (

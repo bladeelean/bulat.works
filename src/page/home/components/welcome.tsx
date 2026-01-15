@@ -6,7 +6,7 @@ export const Welcome = () => {
     return (
         <section>
             <div className="container pt-36">
-                <p className=" w-fit text-2xl font-semibold text-gradient-welcome ">Sr. Product designer,  6+ лет опыта</p>
+                <p className=" w-fit text-2xl font-semibold text-gradient-welcome ">Middle Product manager, 2+ лет опыта</p>
                 <div className=" flex gap-10">
                     <div>
                         <p className=" text-[2.65rem] leading-14 font-semibold mt-8">Привет, я Булат — product manager.Запускал и принимал участие в B2B и B2C в продуктах с миллионной аудиторией.</p>

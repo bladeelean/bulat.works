@@ -22,7 +22,7 @@ export const Experience = () => {
             <div className="grid grid-cols-[12rem_1fr] gap-8" key={item.name}>
               <h3 className="font-semibold">
                 {item.years}
-                {item.now && <span className="text-[#73DC36]"> — н.в.</span>}
+                {item.now && <span className="text-[#73DC36]"> н.в.</span>}
               </h3>
               <div>
                 <p className="font-semibold">{item.name}</p>

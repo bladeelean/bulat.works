@@ -11,7 +11,6 @@ const experienceData = [
         years: "2023 - 2024",
 ]
 
-
 export const Experience = () => {
     return (
         <section>

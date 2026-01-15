@@ -4,8 +4,8 @@ import { Providers, TanstackProvider } from "@/common/providers";
 import { Footer, Header } from "@/components";
 import { inter, sf_pro } from "@/styles/fonts";
 
-const titleSite = "Ruslan ✦ Creative product designer";
-const descriptionSite = "Based in Kazan, hands-on by nature, with a systems mindset, strong product vision, and empathy as a core strength";
+const titleSite = "Bulat ✦ Creative product manager";
+const descriptionSite = "Казань, PM: связываю бизнес, пользователей и разработку, навожу порядок в требованиях и доставляю ценность итерациями";
 
 export const metadata: Metadata = {
 	title: titleSite,

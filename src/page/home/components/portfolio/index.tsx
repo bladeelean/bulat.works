@@ -8,7 +8,7 @@ export const Portfolio = () => {
   href="/cv.pdf"
   target="_blank"
   rel="noopener noreferrer"
- className="h-[64px] rounded-[20px]
+ className="h-[64px] rounded-[24px]
            inline-flex items-center justify-center
            px-10
            text-white text-2xl font-medium leading-none
